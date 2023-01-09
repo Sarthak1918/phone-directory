@@ -1,0 +1,22 @@
+.form {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+}
+.group{
+    margin: 10px auto;
+  }
+  
+  .label{
+    display: block;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  input{
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    font-family: inherit;
+  }

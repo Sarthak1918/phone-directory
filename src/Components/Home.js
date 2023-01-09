@@ -6,23 +6,25 @@ function Home({ data, deleteItem }) {
   return (
     <>
       <Header title="Phone Directory" />
-      <Link to="/add"><button className="add-btn">Add</button></Link>
+      <Link to="/add">
+        <button className="add-btn">Add</button>
+      </Link>
       <div className="contact-list-container">
         <div className="contact-list head">
           <p className="contact-listItem">Name</p>
           <p className="contact-listItem">Phone Number</p>
           <p className="contact-listItem">Action</p>
         </div>
-        {data.map((item) => {
+        {data.map((item, key) => {
           return (
-            <div className="contact-list">
+            <div key={key} className="contact-list">
               <p className="contact-listItem">{item.name}</p>
               <p className="contact-listItem">{item.phoneNumber}</p>
               <p className="contact-listItem">
                 <button
                   className="delete-btn"
                   onClick={() => {
-                    deleteItem(item.id);
+                    deleteItem(key);
                   }}
                 >
                   Delete
